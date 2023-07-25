@@ -9,7 +9,7 @@ import axios from 'axios';
 
 
 
-const PDFGenerator = () => {
+const PDFGenerator = ({ id }) => {
 
 
   const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkzNzc3OTI2LCJpYXQiOjE2ODg1OTM5MjYsImp0aSI6IjEyMWU1MWYwYzQ0MTQzOGFiNTc0YmQzNTkxZmE5NzdkIiwidXNlcl9pZCI6N30.X5Ape5UBLUj5HbjRScndjCjjtuBRNGIASR6MN6pmSQk'
@@ -25,8 +25,6 @@ const PDFGenerator = () => {
   const [smallPosts, setSmallPosts] = useState([]);
   const [smallerPosts, setSmallerPosts] = useState([]);
 
-
-  const [id, setId] = useState(23)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -240,7 +238,7 @@ const PDFGenerator = () => {
                               <Image src={post.is_anonymous
                                 ? "https://avatars.githubusercontent.com/u/16786985?v=4" : `https://yearbook.sarc-iitb.org${post.written_by_profile.profile_image}`} style={styles.profilePicLeft} />
                               <Text style={styles.profileTextLeft}>{post.is_anonymous
-                                ? post.written_by : post.written_by_profile.name}</Text>
+                                ? post.written_by : `${post.written_by_profile.name.split(" ")[0]} ${post.written_by_profile.name.split(" ")[1] ? (post.written_by_profile.name.split(" ")[1]):("")}`}</Text>
                             </View>
                             <View style={styles.textContainer}>
                               <Text style={styles.content}>{post.content}</Text>
@@ -257,7 +255,7 @@ const PDFGenerator = () => {
                               <Image src={post.is_anonymous
                                 ? "https://avatars.githubusercontent.com/u/16786985?v=4" : `https://yearbook.sarc-iitb.org${post.written_by_profile.profile_image}`} style={styles.profilePicRight} />
                               <Text style={styles.profileTextRight}>{post.is_anonymous
-                                ? post.written_by : post.written_by_profile.name}</Text>
+                                ? post.written_by : `${post.written_by_profile.name.split(" ")[0]} ${post.written_by_profile.name.split(" ")[1] ? (post.written_by_profile.name.split(" ")[1]):("")}`}</Text>
                             </View>
                           </View>
                         )}
@@ -290,7 +288,7 @@ const PDFGenerator = () => {
                               <Image src={post.is_anonymous
                                 ? "https://avatars.githubusercontent.com/u/16786985?v=4" : `https://yearbook.sarc-iitb.org${post.written_by_profile.profile_image}`} style={styles.profilePicLeft} />
                               <Text style={styles.profileTextLeft}>{post.is_anonymous
-                                ? post.written_by : post.written_by_profile.name}</Text>
+                                ? post.written_by : `${post.written_by_profile.name.split(" ")[0]} ${post.written_by_profile.name.split(" ")[1] ? (post.written_by_profile.name.split(" ")[1]):("")}`}</Text>
                             </View>
                             <View style={styles.textContainer}>
                               <Text style={styles.content}>{post.content}</Text>
@@ -307,7 +305,7 @@ const PDFGenerator = () => {
                               <Image src={post.is_anonymous
                                 ? "https://avatars.githubusercontent.com/u/16786985?v=4" : `https://yearbook.sarc-iitb.org${post.written_by_profile.profile_image}`} style={styles.profilePicRight} />
                               <Text style={styles.profileTextRight}>{post.is_anonymous
-                                ? post.written_by : post.written_by_profile.name}</Text>
+                                ? post.written_by : `${post.written_by_profile.name.split(" ")[0]} ${post.written_by_profile.name.split(" ")[1] ? (post.written_by_profile.name.split(" ")[1]):("")}`}</Text>
                             </View>
                           </View>
                         )}
@@ -340,7 +338,7 @@ const PDFGenerator = () => {
                             <Image src={post.is_anonymous
                               ? "https://avatars.githubusercontent.com/u/16786985?v=4" : `https://yearbook.sarc-iitb.org${post.written_by_profile.profile_image}`} style={styles.profilePicLeft} />
                             <Text style={styles.profileTextLeft}>{post.is_anonymous
-                              ? post.written_by : post.written_by_profile.name}</Text>
+                              ? post.written_by : `${post.written_by_profile.name.split(" ")[0]} ${post.written_by_profile.name.split(" ")[1] ? (post.written_by_profile.name.split(" ")[1]):("")}`}</Text>
                           </View>
                           <View style={styles.textContainer}>
                             <Text style={styles.content}>{post.content}</Text>
@@ -357,7 +355,7 @@ const PDFGenerator = () => {
                             <Image src={post.is_anonymous
                               ? "https://avatars.githubusercontent.com/u/16786985?v=4" : `https://yearbook.sarc-iitb.org${post.written_by_profile.profile_image}`} style={styles.profilePicRight} />
                             <Text style={styles.profileTextRight}>{post.is_anonymous
-                              ? post.written_by : post.written_by_profile.name}</Text>
+                              ? post.written_by : `${post.written_by_profile.name.split(" ")[0]} ${post.written_by_profile.name.split(" ")[1] ? (post.written_by_profile.name.split(" ")[1]):("")}`}</Text>
                           </View>
                         </View>
                       )}
@@ -388,7 +386,7 @@ const PDFGenerator = () => {
                               <Image src={post.is_anonymous
                                 ? "https://avatars.githubusercontent.com/u/16786985?v=4" : `https://yearbook.sarc-iitb.org${post.written_by_profile.profile_image}`} style={styles.profilePicLeft} />
                               <Text style={styles.profileTextLeft}>{post.is_anonymous
-                                ? post.written_by : post.written_by_profile.name}</Text>
+                                ? post.written_by : `${post.written_by_profile.name.split(" ")[0]} ${post.written_by_profile.name.split(" ")[1] ? (post.written_by_profile.name.split(" ")[1]):("")}`}</Text>
                             </View>
                             <View style={styles.textContainer}>
                               <Text style={styles.content}>{post.content}</Text>
@@ -404,7 +402,7 @@ const PDFGenerator = () => {
                                   <Image src={post.is_anonymous
                                     ? "https://avatars.githubusercontent.com/u/16786985?v=4" : `https://yearbook.sarc-iitb.org${post.written_by_profile.profile_image}`} style={styles.smallerProfilePic} />
                                   <Text style={styles.smallerProfileText}>{post.is_anonymous
-                                    ? post.written_by : post.written_by_profile.name}</Text>
+                                    ? post.written_by : `${post.written_by_profile.name.split(" ")[0]} ${post.written_by_profile.name.split(" ")[1] ? (post.written_by_profile.name.split(" ")[1]):("")}`}</Text>
                                 </View>
                                 <View style={styles.textContainer}>
                                   <Text style={styles.content}>{post.content}</Text>
@@ -437,7 +435,7 @@ const PDFGenerator = () => {
                             <Image src={post.is_anonymous
                               ? "https://avatars.githubusercontent.com/u/16786985?v=4" : `https://yearbook.sarc-iitb.org${post.written_by_profile.profile_image}`} style={styles.profilePicLeft} />
                             <Text style={styles.profileTextLeft}>{post.is_anonymous
-                              ? post.written_by : post.written_by_profile.name}</Text>
+                              ? post.written_by : `${post.written_by_profile.name.split(" ")[0]} ${post.written_by_profile.name.split(" ")[1] ? (post.written_by_profile.name.split(" ")[1]):("")}`}</Text>
                           </View>
                           <View style={styles.textContainer}>
                             <Text style={styles.content}>{post.content}</Text>
@@ -454,7 +452,7 @@ const PDFGenerator = () => {
                             <Image src={post.is_anonymous
                               ? "https://avatars.githubusercontent.com/u/16786985?v=4" : `https://yearbook.sarc-iitb.org${post.written_by_profile.profile_image}`} style={styles.profilePicRight} />
                             <Text style={styles.profileTextRight}>{post.is_anonymous
-                              ? post.written_by : post.written_by_profile.name}</Text>
+                              ? post.written_by : `${post.written_by_profile.name.split(" ")[0]} ${post.written_by_profile.name.split(" ")[1] ? (post.written_by_profile.name.split(" ")[1]):("")}`}</Text>
                           </View>
                         </View>
                       )}
@@ -487,7 +485,7 @@ const PDFGenerator = () => {
                             <Image src={post.is_anonymous
                               ? "https://avatars.githubusercontent.com/u/16786985?v=4" : `https://yearbook.sarc-iitb.org${post.written_by_profile.profile_image}`} style={styles.profilePicLeft} />
                             <Text style={styles.profileTextLeft}>{post.is_anonymous
-                              ? post.written_by : post.written_by_profile.name}</Text>
+                              ? post.written_by : `${post.written_by_profile.name.split(" ")[0]} ${post.written_by_profile.name.split(" ")[1] ? (post.written_by_profile.name.split(" ")[1]):("")}`}</Text>
                           </View>
                           <View style={styles.textContainer}>
                             <Text style={styles.content}>{post.content}</Text>
@@ -504,7 +502,7 @@ const PDFGenerator = () => {
                             <Image src={post.is_anonymous
                               ? "https://avatars.githubusercontent.com/u/16786985?v=4" : `https://yearbook.sarc-iitb.org${post.written_by_profile.profile_image}`} style={styles.profilePicRight} />
                             <Text style={styles.profileTextRight}>{post.is_anonymous
-                              ? post.written_by : post.written_by_profile.name}</Text>
+                              ? post.written_by : `${post.written_by_profile.name.split(" ")[0]} ${post.written_by_profile.name.split(" ")[1] ? (post.written_by_profile.name.split(" ")[1]):("")}`}</Text>
                           </View>
                         </View>
                       )}
@@ -531,7 +529,7 @@ const PDFGenerator = () => {
                         <Image src={post.is_anonymous
                           ? "https://avatars.githubusercontent.com/u/16786985?v=4" : `https://yearbook.sarc-iitb.org${post.written_by_profile.profile_image}`} style={styles.smallerProfilePic} />
                         <Text style={styles.smallerProfileText}>{post.is_anonymous
-                          ? post.written_by : post.written_by_profile.name}</Text>
+                          ? post.written_by : `${post.written_by_profile.name.split(" ")[0]} ${post.written_by_profile.name.split(" ")[1] ? (post.written_by_profile.name.split(" ")[1]):("")}`}</Text>
                       </View>
                       <View style={styles.textContainer}>
                         <Text style={styles.content}>{post.content}</Text>
