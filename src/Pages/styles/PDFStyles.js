@@ -1,10 +1,16 @@
 import { StyleSheet } from "@react-pdf/renderer";
 
+let color = ["black", "blue", "red", "yellow"];
+
+function randomColor() {
+  return color[Math.floor(Math.random() * color.length)];
+}
 
 export const styles = StyleSheet.create({
   page: {
     flexDirection: 'row',
   },
+
   backgroundImg: {
     position: 'absolute',
     top: 0,
@@ -41,15 +47,26 @@ export const styles = StyleSheet.create({
     height: "1.7in",
     transform: 'rotate(10deg)',
     transformOrigin: "center center",
-    objectFit: "cover"
+    objectFit: "cover",
+    borderRadius: "6px",
   },
 
   smallerProfilePic: {
-    width: "1.7in",
-    height: "1.7in",
+    width: "1in",
+    height: "1in",
     transform: 'rotate(1deg)',
     transformOrigin: "center center",
-    objectFit: "cover"
+    objectFit: "cover",
+    borderRadius: "6px",
+  },
+
+  smallerProfilePicc: {
+    width: "1in",
+    height: "1in",
+    transform: 'rotate(1deg)',
+    transformOrigin: "center center",
+    objectFit: "cover",
+    borderRadius: "6px",
   },
 
 
@@ -86,7 +103,8 @@ export const styles = StyleSheet.create({
     transform: 'rotate(-10deg)',
     transformOrigin: "center center",
 
-    objectFit: "cover"
+    objectFit: "cover",
+    borderRadius: "6px",
   },
 
  
@@ -108,7 +126,8 @@ export const styles = StyleSheet.create({
     paddingTop: "7vh",
     paddingBottom: "7vh",
     height: "100vh",
-    justifyContent: "space-between",
+    justifyContent: "flex-start",
+    lineHeight: 1.5,
   },
 
   postContainer: {
@@ -128,41 +147,70 @@ export const styles = StyleSheet.create({
 
 
   smallHeight: {
-    height: "21.5vh",
+    height: "12.28vh",
+  },
+
+  smallWidth: {
+    width: "75%",
+  },
+  
+  semiMediumHeight: {
+    height: "17.2vh",
+  },
+
+  semiMediumWidth: {
+    width: "74%",
   },
 
   mediumHeight: {
     height: "28.66vh",
   },
 
+  mediumWidth: {
+    width: "73%",
+  },
+
   largeHeight: {
     height: "43vh",
+  },
+
+  apniHeight: {
+    height: "22.5vh",
+  },
+
+  largeWidth: {
+    width: "71%",
   },
 
   largerHeight: {
     height: "85vh"
   },
 
-  textContainer: {
+  largerWidth: {
     width: "70%",
+  },
+
+  textContainer: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
   },
 
 
   textContainerRight: {
-    width: "70%",
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
   },
 
 
   content: {
-    fontSize: 12,
+    fontSize: 10.5,
+    fontFamily: "Roboto",
+    // fontStyle: "normal",
+    // fontWeight: 400,
   },
 
 
@@ -172,8 +220,10 @@ export const styles = StyleSheet.create({
   smallerPostsContaner: {
     display: "flex",
     width: "100vw",
+    paddingLeft: "7vw",
+    paddingRight: "7vw",
     flexDirection: "row",
-    justifyContent: "space-around"
+    justifyContent: "space-between"
   },
 
 
@@ -185,11 +235,12 @@ export const styles = StyleSheet.create({
   },
 
   smallerPostContainer: {
-    width: "40vw",
+    width: "43vw",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    margin: "0.5in",
   },
 
   smallerPostContainerr: {
@@ -217,11 +268,64 @@ export const styles = StyleSheet.create({
   },
 
   smallerPostsText: {
-    fontSize: 14,
+    fontSize: 12,
   },
 
   smallerPostsContent: {
     width: "100%"
+  },
+
+
+
+  smallProfilePic:{
+    width: "1in",
+    height: "1in",
+  },
+
+  semiMediumProfilePic:{
+    width: "1.2in",
+    height: "1.2in",
+  },
+
+  mediumProfilePic:{
+    width: "1.4in",
+    height: "1.4in",
+  },
+
+
+  largeProfilePic:{
+    width: "1.6in",
+    height: "1.6in",
+  },
+
+  largerProfilePic: {
+    width: "1.7in",
+    height: "1.7in",
+  },
+
+
+  smallProfileText:{
+    position: "absolute",
+    fontSize: 12,
+    fontFamily: "Comic",
+    fontWeight: 700,
+    fontStyle: "italic",
+    marginBottm: 10,
+    right: 0,
+  },
+
+  mediumProfileText:{
+    fontSize: 13,
+  },
+
+  largeProfileText:{
+    fontSize: 15,
+  },
+
+
+  verified: {
+    width: "0.1in",
+    height: "0.1in",
   }
 
 

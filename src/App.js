@@ -3,7 +3,7 @@ import { PDFDownloadLink, Document, Page, PDFViewer } from "@react-pdf/renderer"
 import PDFGenerator from "./Pages/PDFGenerator";
 
 const App = () => {
-  const idList = [23, 84]; // Replace this with your actual list of ids
+  const idList = [84]; // Replace this with your actual list of ids
   const downloadAnchorRef = useRef(null);
   const [readyToDownload, setReadyToDownload] = useState(false);
 
