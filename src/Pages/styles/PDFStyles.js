@@ -52,8 +52,8 @@ export const styles = StyleSheet.create({
   },
 
   smallerProfilePic: {
-    width: "1in",
-    height: "1in",
+    width: "0.7in",
+    height: "0.7in",
     transform: 'rotate(1deg)',
     transformOrigin: "center center",
     objectFit: "cover",
@@ -127,13 +127,12 @@ export const styles = StyleSheet.create({
     paddingBottom: "7vh",
     height: "100vh",
     justifyContent: "flex-start",
-    lineHeight: 1.5,
   },
 
   postContainer: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
   },
 
@@ -147,31 +146,31 @@ export const styles = StyleSheet.create({
 
 
   smallHeight: {
-    height: "12.28vh",
+    height: "7.81vh",
   },
 
   smallWidth: {
-    width: "75%",
+    width: "84%",
   },
   
   semiMediumHeight: {
-    height: "17.2vh",
+    height: "9.55vh",
   },
 
   semiMediumWidth: {
-    width: "74%",
+    width: "82%",
   },
 
   mediumHeight: {
-    height: "28.66vh",
+    height: "12.28vh",
   },
 
   mediumWidth: {
-    width: "73%",
+    width: "80%",
   },
 
   largeHeight: {
-    height: "43vh",
+    height: "17.5vh",
   },
 
   apniHeight: {
@@ -183,7 +182,7 @@ export const styles = StyleSheet.create({
   },
 
   largerHeight: {
-    height: "85vh"
+    height: "43vh"
   },
 
   largerWidth: {
@@ -207,7 +206,7 @@ export const styles = StyleSheet.create({
 
 
   content: {
-    fontSize: 10.5,
+    fontSize: 8.5,
     fontFamily: "Roboto",
     // fontStyle: "normal",
     // fontWeight: 400,
@@ -278,35 +277,35 @@ export const styles = StyleSheet.create({
 
 
   smallProfilePic:{
-    width: "1in",
-    height: "1in",
+    width: "0.7in",
+    height: "0.7in",
   },
 
   semiMediumProfilePic:{
-    width: "1.2in",
-    height: "1.2in",
+    width: "0.85in",
+    height: "0.85in",
   },
 
   mediumProfilePic:{
+    width: "1.1in",
+    height: "1.1in",
+  },
+
+
+  largeProfilePic:{
+    width: "1.3in",
+    height: "1.3in",
+  },
+
+  largerProfilePic: {
     width: "1.4in",
     height: "1.4in",
   },
 
 
-  largeProfilePic:{
-    width: "1.6in",
-    height: "1.6in",
-  },
-
-  largerProfilePic: {
-    width: "1.7in",
-    height: "1.7in",
-  },
-
-
   smallProfileText:{
     position: "absolute",
-    fontSize: 12,
+    fontSize: 10,
     fontFamily: "Comic",
     fontWeight: 700,
     fontStyle: "italic",
@@ -315,11 +314,11 @@ export const styles = StyleSheet.create({
   },
 
   mediumProfileText:{
-    fontSize: 13,
+    fontSize: 11,
   },
 
   largeProfileText:{
-    fontSize: 15,
+    fontSize: 12,
   },
 
 
