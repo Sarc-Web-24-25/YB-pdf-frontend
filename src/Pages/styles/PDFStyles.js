@@ -7,6 +7,16 @@ function randomColor() {
 }
 
 export const styles = StyleSheet.create({
+
+  name:{
+    position: "absolute",
+    top: "-1.3vh",
+    right: "-1vh",
+    fontSize: 12,
+    fontWeight: 700,
+    color: "#865dff",
+    fontFamily: "Roboto",
+  },
   page: {
     flexDirection: 'row',
   },
@@ -20,7 +30,7 @@ export const styles = StyleSheet.create({
   },
   section: {
     position: "relative",
-    zIndex: 1,
+    zIndex: 2,
     flexGrow: 1,
   },
 
@@ -166,7 +176,7 @@ export const styles = StyleSheet.create({
   },
 
   mediumWidth: {
-    width: "80%",
+    width: "78%",
   },
 
   largeHeight: {
@@ -287,14 +297,14 @@ export const styles = StyleSheet.create({
   },
 
   mediumProfilePic:{
-    width: "1.1in",
-    height: "1.1in",
+    width: "0.9in",
+    height: "0.9in",
   },
 
 
   largeProfilePic:{
-    width: "1.3in",
-    height: "1.3in",
+    width: "1.2in",
+    height: "1.2in",
   },
 
   largerProfilePic: {
