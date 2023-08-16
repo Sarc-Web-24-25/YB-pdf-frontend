@@ -192,7 +192,7 @@ export const styles = StyleSheet.create({
   },
 
   largerHeight: {
-    height: "43vh"
+    height: "28.66vh"
   },
 
   largerWidth: {

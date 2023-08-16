@@ -204,7 +204,7 @@ const PDFGenerator = ({ id, idList }) => {
 
           let leftPosts = fifthSet.length % 12
 
-          if (leftPosts !== 0) {
+          if (leftPosts !== 0 && (fourthSet.length !== 0 || thirdSet.length !== 0 || secondSet.length !== 0 || firstSet.length !== 0 || zerothSet.length !== 0)) {
             for (let i = 0; i < leftPosts; i += 1) {
               fourthSet.push(fifthSet.pop(fifthSet[i]))
             }
@@ -241,7 +241,7 @@ const PDFGenerator = ({ id, idList }) => {
 
           let leftPosts = fourthSet.length % 11
 
-          if (leftPosts !== 0) {
+          if (leftPosts !== 0 && (thirdSet.length !== 0 || secondSet.length !== 0 || firstSet.length !== 0 || zerothSet.length !== 0)) {
             for (let i = 0; i < leftPosts; i += 1) {
               thirdSet.push(fourthSet.pop(fourthSet[i]))
             }
@@ -268,7 +268,7 @@ const PDFGenerator = ({ id, idList }) => {
 
           let leftPosts = thirdSet.length % 9
 
-          if (leftPosts !== 0) {
+          if (leftPosts !== 0 && (secondSet.length !== 0 || firstSet.length !== 0 || zerothSet.length !== 0)) {
             for (let i = 0; i < leftPosts; i += 1) {
               secondSet.push(thirdSet.pop(thirdSet[i]))
             }
@@ -292,7 +292,7 @@ const PDFGenerator = ({ id, idList }) => {
 
           let leftPosts = secondSet.length % 7
 
-          if (leftPosts !== 0) {
+          if (leftPosts !== 0 && (firstSet.length !== 0 || zerothSet.length !== 0)) {
             for (let i = 0; i < leftPosts; i += 1) {
               firstSet.push(secondSet.pop(secondSet[i]))
             }
@@ -350,6 +350,7 @@ const PDFGenerator = ({ id, idList }) => {
         setSemiMediumPosts(thirdSetFinal)
         setSmallPosts(fourthSetFinal)
         setSmallerPosts(fifthSetFinal)
+
 
 
         const fetchPostPromises = idList.map(async (id) => {
@@ -472,7 +473,7 @@ const PDFGenerator = ({ id, idList }) => {
 
             let leftPosts = fifthSet.length % 12
 
-            if (leftPosts !== 0) {
+            if (leftPosts !== 0 && (fourthSet.length !== 0 || thirdSet.length !== 0 || secondSet.length !== 0 || firstSet.length !== 0 || zerothSet.length !== 0)) {
               for (let i = 0; i < leftPosts; i += 1) {
                 fourthSet.push(fifthSet.pop(fifthSet[i]))
               }
@@ -509,7 +510,7 @@ const PDFGenerator = ({ id, idList }) => {
 
             let leftPosts = fourthSet.length % 11
 
-            if (leftPosts !== 0) {
+            if (leftPosts !== 0 && (thirdSet.length !== 0 || secondSet.length !== 0 || firstSet.length !== 0 || zerothSet.length !== 0)) {
               for (let i = 0; i < leftPosts; i += 1) {
                 thirdSet.push(fourthSet.pop(fourthSet[i]))
               }
@@ -536,7 +537,7 @@ const PDFGenerator = ({ id, idList }) => {
 
             let leftPosts = thirdSet.length % 9
 
-            if (leftPosts !== 0) {
+            if (leftPosts !== 0 && (secondSet.length !== 0 || firstSet.length !== 0 || zerothSet.length !== 0)) {
               for (let i = 0; i < leftPosts; i += 1) {
                 secondSet.push(thirdSet.pop(thirdSet[i]))
               }
@@ -560,7 +561,7 @@ const PDFGenerator = ({ id, idList }) => {
 
             let leftPosts = secondSet.length % 7
 
-            if (leftPosts !== 0) {
+            if (leftPosts !== 0 && (firstSet.length !== 0 || zerothSet.length !== 0)) {
               for (let i = 0; i < leftPosts; i += 1) {
                 firstSet.push(secondSet.pop(secondSet[i]))
               }
