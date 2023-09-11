@@ -19,7 +19,7 @@ import Roboto from './Fonts/Roboto/Roboto-Regular.ttf';
 import RobotoBold from './Fonts/Roboto/Roboto-Bold.ttf';
 import RobotoItalic from './Fonts/Roboto/Roboto-Italic.ttf';
 import verified from './assets/verified.png';
-import lobster from './Fonts/Lobster/Lobster-Regular.ttf'
+import lobster from './Fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf';
 import fontFile from './Fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf';
 const { createCanvas, loadImage } = require('canvas');
 const pixelmatch = require('pixelmatch');
