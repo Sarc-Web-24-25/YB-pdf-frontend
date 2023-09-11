@@ -53,7 +53,7 @@ Font.register({ family: 'Lobster', src: fontFile });
 
 Font.registerEmojiSource({
   format: 'png',
-  url: "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/",
+  url: "https://twemoji.maxcdn.com/2/72x72/",
 });
 
 
@@ -62,7 +62,7 @@ Font.register({ family: 'LobsterFont', src: lobster });
 
 const PDFGenerator = ({ id, idList }) => {
 
-  const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkzNzc3OTI2LCJpYXQiOjE2ODg1OTM5MjYsImp0aSI6IjEyMWU1MWYwYzQ0MTQzOGFiNTc0YmQzNTkxZmE5NzdkIiwidXNlcl9pZCI6N30.X5Ape5UBLUj5HbjRScndjCjjtuBRNGIASR6MN6pmSQk'
+  const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5NjM2MDEyLCJpYXQiOjE2OTQ0NTIwMTIsImp0aSI6IjA0MjBkNmVlYTdkYjQ2MzhiNWE1YjU3MjNkZDdlYTY2IiwidXNlcl9pZCI6N30.vrtYh_UNSwHxbXis3uar42kqGPAxgbvPHohUl7i-vbc'
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -611,9 +611,6 @@ const PDFGenerator = ({ id, idList }) => {
               zerothSetFinal.push(chunk);
             }
           }
-
-
-
 
           // setLargerPosts(zerothSetFinal)
           // setLargePosts(firstSetFinal)
