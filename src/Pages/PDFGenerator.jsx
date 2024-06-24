@@ -62,7 +62,7 @@ Font.register({ family: 'LobsterFont', src: lobster });
 
 const PDFGenerator = ({ id, idList }) => {
 
-  const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5NjM2MDEyLCJpYXQiOjE2OTQ0NTIwMTIsImp0aSI6IjA0MjBkNmVlYTdkYjQ2MzhiNWE1YjU3MjNkZDdlYTY2IiwidXNlcl9pZCI6N30.vrtYh_UNSwHxbXis3uar42kqGPAxgbvPHohUl7i-vbc'
+  const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIyMzY2OTA4LCJpYXQiOjE3MTcxODI5MDgsImp0aSI6ImViYTIxYjNmOGQ0MzQ5ZTE4MGQ4OGNkOGIyYWVkYmMwIiwidXNlcl9pZCI6ODF9.JvTbrSIz3E0xJ5qrLCnKAr71Gbghb0Fe7gB9m7ZJSRY'
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
